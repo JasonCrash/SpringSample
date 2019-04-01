@@ -27,10 +27,10 @@
     <!-- all log output -->
     <appender name="FILE_ALL" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- all log file name -->
-        <File>${LOG_HOME}/${LOG_FILE_NAME}.log</File>
+        <!-- <File>${LOG_HOME}/${LOG_FILE_NAME}.log</File> -->
 		<!-- rolling policy -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${LOG_DIR}/${LOG_FILE_NAME}.%i.log</FileNamePattern>
+            <FileNamePattern>${LOG_DIR}/${LOG_FILE_NAME}_all.%i.log</FileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>${MAX_FILE_SIZE}</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
@@ -49,7 +49,7 @@
             <OnMatch>ACCEPT</OnMatch>
         </filter>
         <!-- error log file name -->
-        <File>${LOG_HOME}/${LOG_FILE_NAME}_error.log</File>
+        <!--  <File>${LOG_HOME}/${LOG_FILE_NAME}_error.log</File> -->
 		<!-- rolling policy -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>${LOG_DIR}/${LOG_FILE_NAME}_error.%i.log</FileNamePattern>
