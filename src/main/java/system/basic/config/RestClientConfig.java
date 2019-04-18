@@ -1,4 +1,4 @@
-package hello.config;
+package system.basic.config;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
