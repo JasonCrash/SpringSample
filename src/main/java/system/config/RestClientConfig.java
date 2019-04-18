@@ -1,4 +1,4 @@
-package system.basic.config;
+package system.config;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

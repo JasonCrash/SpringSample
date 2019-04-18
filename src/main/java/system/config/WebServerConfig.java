@@ -1,4 +1,4 @@
-package system.basic.config;
+package system.config;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
