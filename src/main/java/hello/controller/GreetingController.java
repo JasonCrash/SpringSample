@@ -1,4 +1,4 @@
-package hello;
+package hello.controller;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import hello.Greeting;
 import hello.entity.Demo;
 import hello.entity.MongoDemo;
 import hello.service.DemoService;
@@ -72,9 +73,9 @@ public class GreetingController {
     
     @RequestMapping(value = "/mongo/list",method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
-    public String getAllMongoDemos() {
+    public List<MongoDemo> getAllMongoDemos() {
     	List<MongoDemo> list = mongoDemoService.findAllDemos();
-    	return new JSONObject(list).toString();
+    	return list;
     }
     
     @RequestMapping(value = "/mongo/delete/{id}",method = RequestMethod.DELETE, produces = "application/json")
