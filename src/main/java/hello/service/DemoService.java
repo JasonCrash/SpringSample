@@ -12,4 +12,12 @@ public interface DemoService {
 
 	void deleteDemo(long id);
 
+	void saveMoreDemo(List<Demo> demos);
+
+	void saveOrUpdateDemo1(Demo demo) throws Exception;
+
+	void saveOrUpdateDemo2(Demo demo) throws Exception;
+
+	void saveOrUpdateDemo3(Demo demo);
+
 }

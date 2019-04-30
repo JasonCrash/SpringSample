@@ -13,7 +13,7 @@ public class Demo {
 	@GeneratedValue
 	private Long id;
 	
-	@Column
+	@Column(length=6)
 	private String name;
 	
 	@Column
@@ -24,6 +24,16 @@ public class Demo {
 	
 	@Column
 	private Date createTime;
+
+	public Demo() {
+		super();
+	}
+
+	public Demo(String name, String email, Date createTime) {
+		this.name = name;
+		this.email = email;
+		this.createTime = createTime;
+	}
 
 	public Long getId() {
 		return id;

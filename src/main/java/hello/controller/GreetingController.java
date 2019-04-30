@@ -1,5 +1,6 @@
 package hello.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -46,7 +47,12 @@ public class GreetingController {
     @RequestMapping(value = "/save",method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public String saveDemo(@RequestBody  Demo demo) {
-    	demoService.saveOrUpdateDemo(demo);
+    	try {
+			demoService.saveOrUpdateDemo(demo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	return "save " + demo.getName() + " success";
     }
     
